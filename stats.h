@@ -2,7 +2,7 @@
 #define STATS_H
 
 struct Stats compute_statistics(const float* numberset, int setlength);
-/*Adding the structure declaration */
+//structure for Stats
 struct Stats{
   float average, min , max;
 };
