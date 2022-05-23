@@ -44,17 +44,15 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
             }
         }
 
-        swap(&numset[stub_Val], &numset[p]);   // Pass by address.
+        swap(&numset[stub_Val], &numset[p]);   // Pass by reference.
     }
-    s.max = numset[setlength-1];               //TEST_CASE("reports average, minimum and maximum")
-    s.min = numset[0];                         //TEST_CASE("reports average, minimum and maximum")
+    s.max = numset[setlength-1];              
+    s.min = numset[0];                         
 
 
     return s;   // added Missing return Value
 }
 
-
-/* Adding function for Test case : raises alerts when max is greater than threshold */
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
 
